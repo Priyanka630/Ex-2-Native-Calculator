@@ -8,15 +8,6 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.nativecal.MainActivity" >
 
-   <EditText
-        android:id="@+id/editText1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        android:ems="10" /> 
-    
-    
     <Button
         android:id="@+id/two"
         style="?android:attr/buttonStyleSmall"
@@ -25,7 +16,7 @@
         android:layout_above="@+id/five"
         android:layout_toLeftOf="@+id/three"
         android:text="2" />
-   
+
     <Button
         android:id="@+id/three"
         style="?android:attr/buttonStyleSmall"
@@ -34,7 +25,7 @@
         android:layout_above="@+id/six"
         android:layout_alignLeft="@+id/nine"
         android:text="3" />
-    
+
     <Button
         android:id="@+id/four"
         style="?android:attr/buttonStyleSmall"
@@ -43,8 +34,8 @@
         android:layout_alignLeft="@+id/one"
         android:layout_below="@+id/one"
         android:text="4" />
-    
-     <Button
+
+    <Button
         android:id="@+id/five"
         style="?android:attr/buttonStyleSmall"
         android:layout_width="wrap_content"
@@ -52,8 +43,8 @@
         android:layout_alignLeft="@+id/two"
         android:layout_alignTop="@+id/four"
         android:text="5" />
-    
-     <Button
+
+    <Button
         android:id="@+id/six"
         style="?android:attr/buttonStyleSmall"
         android:layout_width="wrap_content"
@@ -61,8 +52,8 @@
         android:layout_above="@+id/nine"
         android:layout_alignLeft="@+id/nine"
         android:text="6" />
-     
-     <Button
+
+    <Button
         android:id="@+id/seven"
         style="?android:attr/buttonStyleSmall"
         android:layout_width="wrap_content"
@@ -88,8 +79,7 @@
         android:layout_below="@+id/five"
         android:layout_centerHorizontal="true"
         android:text="9" />
-    
-    
+
     <Button
         android:id="@+id/zero"
         style="?android:attr/buttonStyleSmall"
@@ -98,7 +88,6 @@
         android:layout_below="@+id/seven"
         android:layout_toRightOf="@+id/seven"
         android:text="0" />
-
 
     <Button
         android:id="@+id/del"
@@ -139,24 +128,12 @@
         android:text="Sub" />
 
     <Button
-        android:id="@+id/equal"
-        style="?android:attr/buttonStyleSmall"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/div"
-        android:layout_alignTop="@+id/add"
-        android:layout_toRightOf="@+id/add"
-        android:text="=" />
-
-    
-
-    <Button
         android:id="@+id/dot"
         style="?android:attr/buttonStyleSmall"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/editText1"
         android:layout_alignLeft="@+id/nine"
+        android:layout_centerVertical="true"
         android:text="." />
 
     <Button
@@ -183,10 +160,20 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_above="@+id/two"
-        android:layout_alignLeft="@+id/editText1"
+        android:layout_centerHorizontal="true"
         android:ems="10" >
 
         <requestFocus />
     </EditText>
+
+    <Button
+        android:id="@+id/equal"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/div"
+        android:layout_alignTop="@+id/add"
+        android:layout_toRightOf="@+id/add"
+        android:text="=" />
 
 </RelativeLayout>

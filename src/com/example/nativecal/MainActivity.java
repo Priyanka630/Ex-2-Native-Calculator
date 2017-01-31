@@ -11,8 +11,6 @@ import android.widget.TextView;
 
 
 public class MainActivity extends Activity {
-
-	TextView text;
 	EditText ed;
 	Button zero;
 	Button one;
@@ -24,8 +22,6 @@ public class MainActivity extends Activity {
 	 
     boolean mAdd , mSub ,mMul ,mDiv ;
  
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -49,7 +45,12 @@ public class MainActivity extends Activity {
         del=(Button) findViewById(R.id.del);
         dot=(Button) findViewById(R.id.dot);
         
-        
+        zero.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+            	ed.setText(ed.getText()+"0");
+            }
+        });
         one.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -112,30 +113,90 @@ public class MainActivity extends Activity {
             	ed.setText(ed.getText()+"9");
             }
         });
-        zero.setOnClickListener(new View.OnClickListener() {
+        add.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-            	ed.setText(ed.getText()+"0");
+ 
+                if (ed == null){
+                    ed.setText("");
+                }else {
+                    ValueOne = Float.parseFloat(ed.getText() + "");
+                    mAdd = true;
+                    ed.setText(null);
+                }
             }
         });
+ 
+        sub.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ValueOne = Float.parseFloat(ed.getText() + "");
+                mSub = true ;
+                ed.setText(null);
+            }
+        });
+ 
+        mul.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ValueOne = Float.parseFloat(ed.getText() + "");
+                mMul = true ;
+                ed.setText(null);
+            }
+        });
+ 
+        div.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ValueOne = Float.parseFloat(ed.getText()+"");
+                mDiv = true ;
+                ed.setText(null);
+            }
+        });
+ 
+        equal.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ValueTwo = Float.parseFloat(ed.getText() + "");
+ 
+                if (mAdd == true){
+ 
+                    ed.setText(ValueOne + ValueTwo +"");
+                    mAdd=false;
+                }
+ 
+ 
+                if (mSub == true){
+                    ed.setText(ValueOne - ValueTwo+"");
+                    mSub=false;
+                }
+ 
+                if (mMul == true){
+                    ed.setText(ValueOne * ValueTwo+"");
+                    mMul=false;
+                }
+ 
+                if (mDiv == true){
+                    ed.setText(ValueOne / ValueTwo+"");
+                    mDiv=false;
+                }
+            }
+        });
+ 
+        del.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ed.setText("");
+            }
+        });
+ 
         dot.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 ed.setText(ed.getText()+".");
             }
         });
-      
-       
     }
-
-	private Button findViewById(int four2) {
-		// TODO Auto-generated method stub
-		return null;
-	}
  
 }   												
-   
-
-    }
-
    
