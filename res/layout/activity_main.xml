@@ -8,15 +8,6 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.nativecal.MainActivity" >
 
-     <Button
-        android:id="@+id/one"
-        style="?android:attr/buttonStyleSmall"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="38dp"
-        android:layout_toLeftOf="@+id/two"
-        android:text="1" />
-
     <Button
         android:id="@+id/two"
         style="?android:attr/buttonStyleSmall"
@@ -111,15 +102,6 @@
         android:text="C" />
 
     <Button
-        android:id="@+id/dot"
-        style="?android:attr/buttonStyleSmall"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/gridLayout1"
-        android:layout_centerHorizontal="true"
-        android:text="." />
-
-    <Button
         android:id="@+id/div"
         style="?android:attr/buttonStyleSmall"
         android:layout_width="wrap_content"
@@ -148,15 +130,6 @@
         android:text="Sub" />
 
     <Button
-        android:id="@+id/add"
-        style="?android:attr/buttonStyleSmall"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/sub"
-        android:layout_alignLeft="@+id/mul"
-        android:text="Add" />
-
-    <Button
         android:id="@+id/equal"
         style="?android:attr/buttonStyleSmall"
         android:layout_width="wrap_content"
@@ -170,9 +143,44 @@
         android:id="@+id/editText1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/three"
-        android:layout_alignLeft="@+id/one"
-        android:layout_marginLeft="14dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:ems="10" />
+
+    <Button
+        android:id="@+id/dot"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/editText1"
+        android:layout_alignLeft="@+id/nine"
+        android:text="." />
+
+    <Button
+        android:id="@+id/add"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/three"
+        android:layout_alignBottom="@+id/three"
+        android:layout_alignLeft="@+id/mul"
+        android:text="Add" />
+
+    <Button
+        android:id="@+id/one"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/sub"
+        android:layout_toLeftOf="@+id/two"
+        android:text="1" />
+
+    <EditText
+        android:id="@+id/ed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/two"
+        android:layout_alignLeft="@+id/editText1"
         android:ems="10" >
 
         <requestFocus />

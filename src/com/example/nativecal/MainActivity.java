@@ -1,7 +1,6 @@
 package com.example.nativecal;
 
-
-import android.support.v7.app.ActionBarActivity;
+import android.app.Activity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -11,7 +10,8 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 
-public class MainActivity extends ActionBarActivity {
+public class MainActivity extends Activity {
+
 	TextView text;
 	EditText ed;
 	Button zero;
@@ -24,11 +24,13 @@ public class MainActivity extends ActionBarActivity {
 	 
     boolean mAdd , mSub ,mMul ,mDiv ;
  
+
+
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        ed=(EditText) findViewById(R.id.editText1);
-        text=(TextView) findViewById(R.id.text1);
+        ed=(EditText) findViewById(R.id.ed);
         zero=(Button) findViewById(R.id.zero);
         one=(Button) findViewById(R.id.one);
         two=(Button) findViewById(R.id.two);
@@ -125,6 +127,15 @@ public class MainActivity extends ActionBarActivity {
       
        
     }
+
+	private Button findViewById(int four2) {
+		// TODO Auto-generated method stub
+		return null;
+	}
  
 }   												
+   
+
+    }
+
    
